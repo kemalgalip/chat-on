@@ -3,6 +3,8 @@ import arrowSvg from "../img/arrow.svg"
 import profilePicture from "../img/profile-picture.jpg"
 import beachPicture from "../img/beach.jpg"
 import rockPicture from "../img/rock.jpg"
+import downloadAppstore from "../img/download-appstore.png"
+import downloadGoogle from "../img/download-google.png"
 
 export default function Hero(props) {
     const [headerRefHeight, setHeaderRefHeight] = React.useState(0)
@@ -53,6 +55,10 @@ export default function Hero(props) {
                 <div className="hero-text-div">
                     <h1>Your new chatting app</h1>
                     <p>Say goodbye to slow and unreliable messaging. Our chat app delivers lightning-fast messages so you can stay connected with the people who matter most. Sign up now and start chatting!</p>
+                    <div>
+                        <a href="https://www.apple.com/app-store" target="_blank"><img src={downloadAppstore} /></a>
+                        <a href="https://play.google.com/store/apps" target="_blank"><img src={downloadGoogle} /></a>
+                    </div>
                 </div>
             </div>
         </section>

@@ -99,7 +99,7 @@ footer > p {
 .hero-section {
   position: relative;
   width: 100%;
-  padding: 50px 25px;
+  padding: 75px 25px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -128,7 +128,7 @@ footer > p {
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 100px;
@@ -339,12 +339,30 @@ footer > p {
 }
 
 .hero-text-div > h1 {
+  font-size: 1.75rem;
   color: var(--MAIN-GRAY-COLOR);
 }
 
 .hero-text-div > p {
   color: var(--MAIN-GRAY-COLOR);
-  margin-top: 15px;
+  margin-top: 20px;
+}
+
+.hero-text-div > div {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hero-text-div > div > a {
+  font-size: 0;
+}
+
+.hero-text-div > div > a > img {
+  max-width: 100%;
 }
 
 /* MAINTEXT && ABOUT */
@@ -531,7 +549,7 @@ h3.vertical-timeline-element-title {
 }
 
 .download-section > h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   text-align: center;
   color: transparent;
   background-image: linear-gradient(to right, var(--MAIN-FIRST-COLOR), var(--MAIN-SECOND-COLOR));
@@ -542,9 +560,9 @@ h3.vertical-timeline-element-title {
 .download-img-div {
   font-size: 0;
   max-width: 400px;
-  margin-top: 15px;
+  margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   opacity: 0;
   transform: translateX(-25px);
@@ -571,8 +589,16 @@ h3.vertical-timeline-element-title {
 }
 
 @media screen and (max-width: 768px) {
+  header > h2 {
+    margin: 20px auto;
+  }
+
   header > nav {
     display: none;
+  }
+
+  .hero-section {
+    padding: 50px 25px;
   }
 
   .hero-content {
@@ -597,6 +623,10 @@ h3.vertical-timeline-element-title {
     text-align: center;
   }
 
+  .hero-text-div > div {
+    max-width: none;
+  }
+
   .maintext-section, .about-section {
     align-items: center;
   }
@@ -615,11 +645,26 @@ h3.vertical-timeline-element-title {
 }
 
 @media screen and (max-width: 400px) {
+  .hero-text-div > div {
+    grid-template-columns: 1fr;
+  }
+
   .download-img-div {
     grid-template-columns: 1fr;
   }
 
   .image-section > h2 {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .phone-case {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .phone-case::before {
+    width: 55%;
   }
 }
